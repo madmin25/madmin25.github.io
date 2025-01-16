@@ -82,14 +82,6 @@ export default function Home() {
     };
   }, []);
 
-  const handleScrollToSection = (sectionIndex: number) => {
-    const section: HTMLDivElement | undefined = sections.current[sectionIndex];
-    
-    if (section) {
-      section?.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
 
   return (
     // banner
