@@ -41,8 +41,8 @@ export default function Home() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const sectionIndex = entry.target.dataset.index;
-          setCurrentSection(sectionIndex);
+          const sectionIndex =  (entry.target as HTMLElement).dataset.index?.toString() || '0';
+          setCurrentSection(parseInt(sectionIndex, 10));
           // Scroll to the section
           setIsAutoscrolling(true);
           entry.target.scrollIntoView({ behavior: 'smooth' });
