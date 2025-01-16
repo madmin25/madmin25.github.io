@@ -51,7 +51,7 @@ useEffect(() => {
         }
       };
 
-      const handleClick = useCallback((newIndex:number) => (event) => {
+      const handleClick = useCallback((newIndex:number) => (event:any) => {
         setCurrentIndex(newIndex);
         console.log("==========");
         console.log("INDEX: " + newIndex);
