@@ -27,21 +27,21 @@ return(
     </span> 
     
   </button>
-  <div className={`ml-2 border-2 md:border-0 border-[--whiteish] md:ml-0 -mt-3 bg-[--blackalpha] md:bg-transparent p-6 pt-0 pl-2 float-left ${isOpen ? 'visible' : 'collapse'} md:visible`}>
+  <div className={`ml-2 rounded-br-3xl border-0 md:border-0 border-[--whiteish] md:ml-0 -mt-3 bg-[--blackalpha] md:bg-transparent p-6 pt-0 pl-2 float-left ${isOpen ? 'visible' : 'collapse'} md:visible`}>
     <ul className="border-0 border-red-400 mt-[0.1rem] flex flex-col md:flex-row list-none gap-y-1 gap-x-4">
         <li className=' hover:underline underline-offset-4'><a onClick={handleClick} href="#Home">Home</a></li>
         <li className=' hover:underline underline-offset-4'><a onClick={handleClick} href="#Portfolio">Portfolio</a></li>
         <li className=' hover:underline underline-offset-4'><a onClick={handleClick} href="#Skills">Skills</a></li>
         <li className=' hover:underline underline-offset-4'><a onClick={handleClick} href="#Timeline">Timeline</a></li>
-        <li className=' hover:underline underline-offset-4'><a onClick={handleClick} href="#Contact">Contact</a></li>
+        {/* <li className=' hover:underline underline-offset-4'><a onClick={handleClick} href="#Contact">Contact</a></li> */}
     </ul>
     </div>
 
     <div className='float-right flex gap-x-2 h-5 -mt-2 mr-6 md:mr-0 '>
-             <img className="h-full object-contain invert hover:scale-[110%]" src="linkedin.svg"></img>
-             <img className="h-full object-contain invert hover:scale-[110%]" src="xing.svg"></img>
-             <img className="h-full object-contain invert hover:scale-[110%]" src="youtube.svg"></img>
-             <img className="h-full object-contain invert hover:scale-[110%]" src="github.svg"></img>
+    <a href="https://www.linkedin.com/in/martin-adelwarth-3300a714a/" target="_blank"><img className="h-full object-contain invert hover:scale-[110%]" src="linkedin.svg"></img></a>
+    <a href="http://www.xing.com/profile/Martin_Adelwarth" target="_blank"><img className="h-full object-contain invert hover:scale-[110%]" src="xing.svg"></img></a>
+             {/* <img className="h-full object-contain invert hover:scale-[110%]" src="youtube.svg"></img>
+             <img className="h-full object-contain invert hover:scale-[110%]" src="github.svg"></img> */}
          </div>
   </div>
   

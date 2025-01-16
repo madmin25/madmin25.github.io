@@ -379,22 +379,35 @@
 }
 
 /* -----------TIMELINE-------- */
-/* -----------TIMELINE-------- */
 .timelineCircle{
   width: 32px;
   height: 32px;
   border-radius: 100%;
   border-width: 6px;
   border-color: var(--accentColor);
-  margin-top: 400px;
-  float: left;
+  margin-top: 350px;
+  /* float: left; */
   position: relative;
-  margin-left: 12%;
-}
-.timelineCircle:first-child{
-  margin-left: 0%;
+  transform: translateX(calc(var(--offset) *100%));
+  /* animation: circleIn 500ms ease-in-out forwards; */
 }
 
+.timelineCircleAnimation{
+  animation: circleIn 500ms ease-in-out forwards;
+}
+
+@keyframes circleIn{
+  from{
+    transform: translateX(calc(var(--offset) *100%));
+  }
+  to{
+    transform:  translateX(calc(var(--offset) *-400%));
+  }
+}
+
+.inheritWidth{
+  width: inherit !important;
+}
 .timelineLine{
   width: 6px;
   height: calc(var(--lineLength)* 1px);
@@ -404,19 +417,23 @@
   top: calc((var(--lineLength) - 10) * -1px);
   transform: scaleY(0);
   transform-origin: bottom;
-  animation: timelineLineIn 500ms linear forwards;
+  /* animation: timelineLineIn 500ms 500ms ease-in-out forwards; */
 }
 
-.timelineLine2{
-  width: 6px;
-  height: 200px;
-  background-color: var(--accentColor);
-  position: absolute;
-  left: -6px;
-  top: calc(height - 10px );
-  transform: scaleY(0);
-  transform-origin: bottom;
-  animation: timelineLineIn 500ms linear forwards;
+.timelineLineAnimation{
+  animation: timelineLineIn 500ms 500ms ease-in-out forwards;
+}
+
+.timelineFont{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /*white-space: nowrap; /* Keeps the content on a single line */
+  /* animation: typing  500ms linear forwards;
+  animation-delay: 1s; */
+}
+
+.timelineFontAnimation{
+  animation: typing  500ms linear forwards;
+  animation-delay: 1s;
 }
 
 @keyframes timelineLineIn{
@@ -429,6 +446,7 @@
     transform-origin: bottom;
   }
 }
+
 
 @keyframes testView{
   from{

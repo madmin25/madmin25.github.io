@@ -4,12 +4,14 @@ import { useState } from 'react';
 import { useRef, useCallback } from 'react';
 
 function GallerySite() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
+    const [currentIndex, setCurrentIndex] = useState(0);    
     const currentIndexRef = useRef(currentIndex);
+    const popupElementRef = useRef<HTMLDivElement | null>(null);
 
 useEffect(() => {
   currentIndexRef.current = currentIndex;
+  const popupElement = document.getElementById("popup") as HTMLDivElement;
+  popupElementRef.current = popupElement;
 }, [currentIndex]);
 
     useEffect(() => {
@@ -35,6 +37,15 @@ useEffect(() => {
     const scaleFactor = 100 / (Math.pow(expfac, numShow-1) + 1);
     const scaleSmallFactor = 100 / (Math.pow(expfac, numSmallShow-1) + 1);
 
+      const showPopup = (src:string) => {
+        popupElementRef.current!.style.backgroundImage = `url(${src})`;
+        popupElementRef.current!.style.display = "block";
+      }
+
+      const closePopup = () => {
+        popupElementRef.current!.style.display = "none";
+      }
+
       const handleRightArrow = () => {
         if(currentIndex < numImages-1){
           setCurrentIndex(currentIndex + 1);
@@ -43,15 +54,14 @@ useEffect(() => {
 
       const handleLeftArrow = () => {
         if(currentIndex > 0){
-          setCurrentIndex(currentIndex - 1);          
+          setCurrentIndex(currentIndex - 1);        
         }
       };
 
       const handleClick = useCallback((newIndex:number) => () => {
         setCurrentIndex(newIndex);
         if(newIndex == currentIndex){
-          alert(list[currentIndex].image);
-          
+          showPopup(list[currentIndex].image);
         }
         else{
           setCurrentIndex(newIndex);
@@ -142,7 +152,7 @@ useEffect(() => {
 
   return (
     <div>
-      <div className='fixed top-0 left-0 w-dvw h-dvh bg-white z-50 hidden'>TEST</div>
+      <div id='popup' onClick={closePopup} className='fixed bg-contain bg-no-repeat bg-center top-0 left-0 w-dvw h-dvh bg-[rgba(0,0,0,0.5)] z-50 hidden'></div>
     <div className='hidden  lg:block relative border-0 border-purple-400  w-[80%] mx-auto text-[--whiteish]'>
       {normalGallery}
     </div>

@@ -66,7 +66,7 @@ function LandingSite() {
         
         <div className='fromLeft border-0 border-green-300 h-[90%] ml-8 pr-10'>
             <div className='border-0 border-red-40'>
-                <div className='kanit-regular text-[--whiteish] text-[3.2rem] leading-[3.2rem] mb-5 text-nowrap mt-20 lg:mt-32 xl:mt-72'> Martin <br/> Adelwarth</div>
+                <div className='kanit-regular text-[--whiteish] text-[3.2rem] leading-[3.2rem] mb-5 text-nowrap mt-14 lg:mt-32 xl:mt-72'> Martin <br/> Adelwarth</div>
                 <div className='kanit-thin text-[--whiteish] text-[1rem] leading-5 '>I am a seasoned multimedia artist and skilled developer, driven by a passion for innovation and continuous growth. With a proven track record of creating impactful visual and digital experiences, I thrive on exploring emerging technologies, including AI, to expand my creative and technical horizons. Let’s build the future together.</div>
                 <div className='w-fit kanit-semibold text-2xl bg-[--accentColor] p-3 text-[--blackish] ml-auto mt-8'> CONTACT ME </div>
             </div>

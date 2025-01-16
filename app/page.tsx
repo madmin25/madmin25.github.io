@@ -61,10 +61,10 @@ export default function Home() {
         <div className='flex-none w-full min-h-dvh'>
           <TimelineSite></TimelineSite>
         </div>
-        <div id="Contact" className='snap-start kanit-semibold text-5xl tracking-widest mx-auto text-[--accentColor] pt-24 md:pt-28 pb-20'>CONTACT</div>
+        {/* <div id="Contact" className='snap-start kanit-semibold text-5xl tracking-widest mx-auto text-[--accentColor] pt-24 md:pt-28 pb-20'>CONTACT</div>
         <div className='flex-none w-full min-h-dvh'>
           contact
-        </div>
+        </div> */}
       </div>
       </div>
     </div>
