@@ -1,16 +1,12 @@
 "use client";
-import { useState, useEffect, useRef } from 'react';
-
+import {  useEffect } from 'react';
+import SkillSite from './components/SkillSite';
+import TimelineSite from './components/TimelineSite';
 import LandingSite from './components/LandingSite';
-
 import Navbar from './components/Navbar';
-
+import GallerySite from './components/GallerySite';
 
 export default function Home() {
-  const [currentSection, setCurrentSection] = useState(0);
-  const sections = useRef<HTMLDivElement[]>([]);
-  const [isAutoscrolling, setIsAutoscrolling] = useState(false);
-  
 
   
 
@@ -37,42 +33,9 @@ export default function Home() {
       });
     });
     animatedElements.forEach((ael) => animObserver.observe(ael));
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const sectionIndex =  (entry.target as HTMLElement).dataset.index?.toString() || '0';
-          setCurrentSection(parseInt(sectionIndex, 10));
-          // Scroll to the section
-          setIsAutoscrolling(true);
-          entry.target.scrollIntoView({ behavior: 'smooth' });
-          setTimeout(() => {
-            setIsAutoscrolling(false);
-          }, 1000); // Adjust the timeout value as needed
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.01,
-    });
   
-    const handleScroll = () => {
-      if (isAutoscrolling) {
-        window.removeEventListener('scroll', handleScroll);
-      }
-    };
-  
-    window.addEventListener('scroll', handleScroll);
-  
-    sections.current.forEach((section) => {
-      observer.observe(section);
-    });
-  
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
   }, []);
+
 
 
   return (
@@ -80,14 +43,13 @@ export default function Home() {
     <div className="kanit-light backdrop w-full h-dvh overflow-hidden">
       
       <div className='w-full md:w-[80%] mx-auto border-0 border-red-400'>
-      {/* <LinkHeader></LinkHeader> */}
       <Navbar></Navbar>
       <div className='scrollcontainer flex flex-none flex-col flex-nowrap overflow-auto overflow-x-hidden mssY w-full h-dvh'>
         <div id="Home" className='collapse snap-start kanit-semibold text-5xl tracking-widest mx-auto text-[--accentColor]'>ABOUT</div>
         <div className='flex-none  w-full min-h-dvh mt-2 md:mt-10 lg:mt-4 xl:mt-8'>
           <LandingSite></LandingSite>
         </div>
-        {/* <div id="Portfolio" className='snap-start kanit-semibold text-5xl tracking-widest mx-auto text-[--accentColor] pt-24 md:pt-28 pb-20'>PORTFOLIO</div>
+        <div id="Portfolio" className='snap-start kanit-semibold text-5xl tracking-widest mx-auto text-[--accentColor] pt-24 md:pt-28 pb-20'>PORTFOLIO</div>
         <div className='flex-none  w-full min-h-dvh'>
           <GallerySite></GallerySite>
         </div>
@@ -102,7 +64,7 @@ export default function Home() {
         <div id="Contact" className='snap-start kanit-semibold text-5xl tracking-widest mx-auto text-[--accentColor] pt-24 md:pt-28 pb-20'>CONTACT</div>
         <div className='flex-none w-full min-h-dvh'>
           contact
-        </div> */}
+        </div>
       </div>
       </div>
     </div>
