@@ -1,18 +1,10 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
-import SectionTransition from './components/SectionTransition';
-import LinkWheel from './components/IconWheel';
-import IconWheel from './components/IconWheel';
-import NavWheel from './components/NavWheel';
-import Skill from './components/Skill';
-import Talent from './components/Talent';
-import SkillIcon from './components/SkillIcon';
-import SkillSite from './components/SkillSite';
-import TimelineSite from './components/TimelineSite';
+
 import LandingSite from './components/LandingSite';
-import LinkHeader from './components/LinkHeader';
+
 import Navbar from './components/Navbar';
-import GallerySite from './components/GallerySite';
+
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
