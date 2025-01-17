@@ -27,7 +27,7 @@ return(
     </span> 
     
   </button>
-  <div className={`ml-2 rounded-br-3xl border-0 md:border-0 border-[--whiteish] md:ml-0 -mt-3 bg-[--blackalpha] md:bg-transparent p-6 pt-0 pl-2 float-left ${isOpen ? 'visible' : 'collapse'} md:visible`}>
+  <div className={`ml-2 rounded-br-3xl border-l-2 md:border-0 border-[--accentalpha] md:ml-0 -mt-3 bg-[--blackalpha] md:bg-transparent p-6 pt-0 pl-2 float-left ${isOpen ? 'visible' : 'collapse'} md:visible`}>
     <ul className="border-0 border-red-400 mt-[0.1rem] flex flex-col md:flex-row list-none gap-y-1 gap-x-4">
         <li className=' hover:underline underline-offset-4'><a onClick={handleClick} href="#Home">Home</a></li>
         <li className=' hover:underline underline-offset-4'><a onClick={handleClick} href="#Portfolio">Portfolio</a></li>

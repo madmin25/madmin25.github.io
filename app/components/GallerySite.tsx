@@ -69,25 +69,141 @@ useEffect(() => {
       }, [currentIndex]);
 
       const list = [
-        { image: "dragon_1.jpg", 
-          headline: "Headline_1",
-          info: "Bla bla bla"}, 
+          { image: "gallery/rr_int.jpg", 
+            headline: "Rolls Royce",
+            info: "HQ Rendering @sndy - Maya & VRay"},
+
+          { image: "gallery/biofresh_2.jpg", 
+            headline: "Liebherr - Biofresh Feature Images",
+            info: "HQ Rendering @mds - Maya & Redshift"},
+        
+          { image: "gallery/bmw_movie.jpg", 
+            headline: "BMW - Free Project",
+            info: "BMW Full CG Short Movie @sndy - Maya & VRay"},
+
+          {image: "gallery/bauma.jpg", 
+            headline: "Liebherr Earthmoving - Bauma 2022",
+            info: "Mix of live-stream-overlays and prerendered clips. @mds - Maya, After Effects"},
+
+          { image: "gallery/man.jpg", 
+            headline: "MAN Logistics",
+            info: "CGI Animation @sndy -Maya, VRay & Nuke"},
           
-        { image: "dragon_2.jpg", 
-          headline: "Headline_2",
-          info: "blub blub"}, 
+          { image: "gallery/haro.jpg", 
+            headline: "Haro",
+            info: "Automated Floor Replacement Renderings @mds - Houdini"},
           
-        { image: "dragon_3.jpg", 
-          headline: "Headline_3",
-          info: "blub blub"}, 
+            { image: "gallery/ostmost.jpg", 
+              headline: "Ostmost - Liebherr",
+              info: "Realtime Refrigerator Configurator @mds - Unreal Engine"},
+
+              { image: "gallery/sujet.jpg", 
+                headline: "Liebherr earthmoving",
+                info: "Giant Poster @mds - Maya, Redshift & Photoshop"},
+
+              { image: "gallery/bmw_tech.jpg", 
+                headline: "BMW - Tech Image",
+                info: "HQ Rendering @VINX -Maya & VRay"},
+
+                { image: "gallery/braun_s7_shaver.jpg", 
+                  headline: "Braun Product Rendering",
+                  info: "HQ Rendering @VINX - Maya & VRay"},
+
+                { image: "gallery/biofresh.jpg", 
+                  headline: "Liebherr - Biofresh Feature Images",
+                  info: "HQ Rendering @mds - Maya & Redshift"}, 
+
+                { image: "gallery/bosch_ar.jpg", 
+                  headline: "BOSCH - AR catalogue",
+                  info: "Interactive AR product catalogue @sndy - Unity & Vuforia"},
+
+                  { image: "gallery/brain.jpg", 
+                    headline: "Colorful Mind",
+                    info: "Free AI Project - ComfyUI & SDXL"},
+                    
+                    { image: "gallery/haro_unreal.jpg", 
+                      headline: "Haro RT Showroom",
+                      info: "Interactive realtime Showroom @mds - Unreal Engine"},
+                    
+                      { image: "gallery/visn.jpg", 
+                        headline: "Osram - VISN",
+                        info: "Short explainer film @mds - Maya, Redshift & After Effects"},
+
+                      { image: "gallery/braun_s7_station.jpg", 
+                        headline: "Braun Product Rendering",
+                        info: "HQ Rendering @VINX - Maya & VRay"},
+
+                        { image: "gallery/rr_clock.jpg", 
+                          headline: "Rolls Royce",
+                          info: "HQ Rendering @sndy - Maya & VRay"},
+
+                          { image: "gallery/fiducia.jpg", 
+                            headline: "Fiducia",
+                            info: "Promo Animation @mds - Maya, Redshift & After Effects"},
+
+                            { image: "gallery/targa.jpg", 
+                              headline: "Porsche Targa",
+                              info: "Photo Retouching and CGI environment @mainworks - Photoshop, 3Ds Max & VRay"},
+
+                              { image: "gallery/haro_ai.jpg", 
+                                headline: "Haro Keyvisual",
+                                info: "Haro AI generated keyvisual @mds - Photoshop, ComfyUI & SDXL"},
+
+                                { image: "gallery/braun_silkepil.jpg", 
+                                  headline: "Braun Product Rendering",
+                                  info: "HQ Rendering @VINX - Maya & VRay"},
+
+                                  { image: "gallery/lhtech.jpg", 
+                                    headline: "Liebherr - Technikfilme",
+                                    info: "Short explainer films @mds - Houdini, Maya, Redshift & After Effects"},
+
+                                    { image: "gallery/mini_LCI.jpg", 
+                                      headline: "Mini - LCI",
+                                      info: "Part replacements on photography @sndy - Maya & VRay"},
+
+                                      { image: "gallery/OAS.jpg", 
+                                        headline: "Liebherr earthmoving - OAS",
+                                        info: "Short explainer films @mds - Blender & After Effects"},
+
+                                        { image: "gallery/OralB.jpg", 
+                                          headline: "OralB",
+                                          info: "HQ Product Rendering @VINX - Maya & MentalRay"},
+
+                                          { image: "gallery/osram_ani.jpg", 
+                                            headline: "Osram Animation",
+                                            info: "Short explainer film @mds - Maya, Redshift & After Effects"},
+
+                                            
+
+                                              { image: "gallery/rr_black.jpg", 
+                                                headline: "Rolls Royce",
+                                                info: "HQ Rendering @sndy - Maya & VRay"},
+
+                                                
+
+                                                  
+
+                                                    { image: "gallery/sky_commercial.jpg", 
+                                                      headline: "Sky Commercial",
+                                                      info: "VFX @sndy - Houdini, VRay & Nuke"},
+
+                                                      
+
+                                                        
+
+                                                          { image: "gallery/targa2.jpg", 
+                                                            headline: "Porsche",
+                                                            info: "Photo Retouching and CGI environment @mainworks - Photoshop, 3Ds Max & VRay"},
+
+                                                            
           
-        { image: "dragon_4.jpg",
-          headline: "Headline_4",
-          info: "blub blub"}, 
+        // { image: "gallery/print.jpg", 
+        //   headline: "Liebherr eartmoving - DPL",
+        //   info: "Digital Product Launcher @mds - Maya, Redshift & After Effects"}, 
           
-        { image: "dragon_5.jpg", 
-          headline: "Headline_5",
-          info: "blub blub blub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blubblub blub"}
+        { image: "gallery/carlton_ai.jpg",
+          headline: "AI",
+          info: "AI Image modification @mds - Photoshop, ComfyUI & SDXL"}
         ];
       
       const numImages = list.length;
@@ -96,9 +212,9 @@ useEffect(() => {
         <div key={index} onClick={handleClick(index)} className='galleryItem overflow-hidden h-full' style={{ ["--itemNum"]: index, ["--currentItem"]: currentIndex, ["--clampLeft"]: Math.sign( index - currentIndex +1), ["--clampRight"]: Math.sign(currentIndex + numShow - index), ["--widthScale"]: 100 * scaleFactor * Math.pow(expfac, numShow - (index - currentIndex)) } as React.CSSProperties}>
           <div className='overflow-hidden relative mx-auto border-[2px] border-[--whiteish] w-full h-full bg-black'><img className='object-cover h-full w-full' draggable="false" src= {currElement.image}/>
             <div className='galleryInfo absolute bottom-0 left-0 w-full'>
-              <div className='kanit-semibold text-[--blackish] leading-1'>
-                <h1 className='pb-2'>{currElement.headline}</h1>
-                <span className='kanit-light  text-sm'>{currElement.info}</span>
+              <div className='kanit-semibold text-[--blackish]'>
+                <h1 className='pb-2  font-[1.5rem]'>{currElement.headline}</h1>
+                <span className='kanit-light  font-[0.7rem] leading-[0rem]'>{currElement.info}</span>
               </div>
             </div>
           </div>

@@ -17,7 +17,7 @@
 
 .galleryInfo{
   --test: calc(var(--clampLeft) * (1 + var(--currentItem) - var(--itemNum)));
-  height: calc(var(--test)*30%);
+  height: calc(var(--test)* 25%);
   padding: calc(var(--test)*1.5rem);
   line-height: 1.2rem;
   background: var(--accentalpha);
@@ -51,10 +51,9 @@
   transition: all 500ms ease-in-out;
 }
 
-/* .galleryItem:hover{
+.galleryItem:hover{
   filter: saturate(100%);
-  filter: invert(10%);
-} */
+}
 .scrollcontainer {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
@@ -66,11 +65,13 @@
 }
 
 .fromLeft{
+  opacity: 0;
   transform: translateX(-100%);
   transition: all 500ms ease-in-out;
 }
 
 .inLeft{
+  opacity: 1;
   transform: translateX(0%);
 }
 
@@ -95,11 +96,13 @@
 
 
 .fromRight{
+  opacity: 0;
   transform: translateX(100%);
   transition: all 500ms ease-in-out;
 }
 
 .inRight{
+  opacity: 1;
   transform: translateX(0%);
 }
 
@@ -385,11 +388,11 @@
   border-radius: 100%;
   border-width: 6px;
   border-color: var(--accentColor);
-  margin-top: 350px;
+  /* margin-top: 350px; */
   /* float: left; */
   position: relative;
-  transform: translateX(calc(var(--offset) *100%));
-  /* animation: circleIn 500ms ease-in-out forwards; */
+  transform: translateY(calc(var(--offset) * -200%));
+
 }
 
 .timelineCircleAnimation{
@@ -398,10 +401,10 @@
 
 @keyframes circleIn{
   from{
-    transform: translateX(calc(var(--offset) *100%));
+    transform: translateY(calc(var(--offset) *-200%));
   }
   to{
-    transform:  translateX(calc(var(--offset) *-400%));
+    transform:  translateY(calc(var(--offset) * 0%));
   }
 }
 
@@ -409,14 +412,15 @@
   width: inherit !important;
 }
 .timelineLine{
-  width: 6px;
-  height: calc(var(--lineLength)* 1px);
+  width: calc(var(--lineLength)* 1px);
+  height: 6px; 
   background-color: var(--accentColor);
   position: absolute;
-  left: -6px;
-  top: calc((var(--lineLength) - 10) * -1px);
-  transform: scaleY(0);
-  transform-origin: bottom;
+  left: 6px;
+  /* top: calc((var(--lineLength) - 10) * -1px); */
+  bottom: -6px;
+  transform: scaleX(0);
+  transform-origin: left;
   /* animation: timelineLineIn 500ms 500ms ease-in-out forwards; */
 }
 
@@ -429,6 +433,7 @@
   /*white-space: nowrap; /* Keeps the content on a single line */
   /* animation: typing  500ms linear forwards;
   animation-delay: 1s; */
+  opacity: 0;
 }
 
 .timelineFontAnimation{
@@ -436,14 +441,19 @@
   animation-delay: 1s;
 }
 
+@keyframes typing {
+  from { width: 0; opacity: 0; }
+  to { width: 100%; opacity: 1; }
+}
+
 @keyframes timelineLineIn{
   from{
-    transform: scaleY(0);
-    transform-origin: bottom;
+    transform: scaleX(0);
+    transform-origin: left;
   }
   to{
-    transform: scaleY(1);
-    transform-origin: bottom;
+    transform: scaleX(1);
+    transform-origin: left;
   }
 }
 
