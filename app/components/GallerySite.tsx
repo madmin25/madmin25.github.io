@@ -246,8 +246,8 @@ useEffect(() => {
 
       const normalGallery = [
       <div key="normalGallery">
-        <div className='mt-[15vh] md:mt-[25vh] float-left mr-3 w-6 h-6 -translate-y-full bg-white' onClick={handleLeftArrow}></div>
-        <div className='mt-[15vh] md:mt-[25vh] float-right ml-3 w-6 h-6 -translate-y-full bg-white' onClick={handleRightArrow}></div>
+        <div className='mt-[15vh] md:mt-[25vh] float-left mr-3 w-6 h-6 -translate-y-full' onClick={handleLeftArrow}><img className='rotate-180' alt="left" src="right.svg"></img></div>
+        <div className='mt-[15vh] md:mt-[25vh] float-right ml-3 w-6 h-6 -translate-y-full' onClick={handleRightArrow}><img className='' alt="left" src="right.svg"></img></div>
         <div className=' flex flex-row border-0 border-green-600 h-[30vh] md:h-[50vh] overflow-hidden'>
         {mappedList}
         </div>
